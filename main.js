@@ -15,8 +15,8 @@ let articleHearts = document.querySelectorAll(".like");
 
 function likeCallback(e) {
   let heart = e.target;
-  mimicServerCall("bogusUrl")
-   //OR: mimicServerCall("bogusUrl", {forceFailure: true})
+  //mimicServerCall("bogusUrl")
+   mimicServerCall("bogusUrl", {forceFailure: true})
     .then(function(serverMessage){
        heart.innerText = glyphStates[heart.innerText];
        heart.style.color = colorStates[heart.style.color];
